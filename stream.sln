@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stream.infrastructure", "st
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stream.infrastructure.tests", "stream.infrastructure.tests\stream.infrastructure.tests.csproj", "{97209CFD-54A1-41FB-B18D-095A440ED666}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_info", "_info", "{C4B09AA5-A680-4141-9B71-BA14FAFE2F33}"
+	ProjectSection(SolutionItems) = preProject
+		stream.txt = stream.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,65 @@
+stream i/o
+"a stream is a sequence of bytes that you ca use to read from or write to a backing store" from msdn
+one benefit of stream-based data is that the data can be consumed by chunks
+
+stream adapters(readers/writers)
+	stream reader/writer
+		read(byte[] array, int offset, int count)
+		write(byte[] array, int offset, int count)
+		  --the array of butes to read from or write to the stream
+		  --offset: index of the array to start copying/reading bytes to/from the stream. Not the postion within the stream.
+		  --count: the maximum number of bytes to read or write.
+	binary reader/writer such jpeg
+	xml reader/writer forward-only cursors to read/write an XML stream
+decorator streams: data mainipulation which can be chained
+	GZip stream/ DefalateStream
+	  -G is more relizable thant DefalateStream
+	Crypto stream
+	  -cryptographic
+	    -
+	Buffered stream
+	 - enhances the performance of reading/writing by reducing number of I/O operations
+	       - write to buffer until buffer is full, data is flushed to the backingstore
+		   - more data in read than actually requested
+backing store streams: bytes
+	FileStream
+	 -has internal buffer
+	MemoryStream
+	NetworkStream
+
+
+Seeking 
+--MemoryStream and FileStream support seeking
+--BufferedStream can wrap a non-seekable stream and provide seeking over the buffered portion 
+
+Stream.Null for big data's unit tests
+
+FileStream
+-in general Files gelocked by a filestream until the stream is closed.
+-FileShare configures how multiple streams can access the same file
+-Multithreading is when multiple  threads access the same stream
+-cache
+-
+
+Isolated storage
+-user-specific data or machine=specific data
+-default size 1M
+
+a windows pipe is a section of shared memory that processes use for communication
+
+HttpWebRequest
+HttpWebResponse
+--abstract for any type of request and response, independent on protocol
+HttpClient
+basic operation for web client
+
+
+Memory-Mapped Files
+
+*Decorator Streams
+
+
+
+
+Asynchronous Support
+
